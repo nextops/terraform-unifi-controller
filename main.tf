@@ -5,6 +5,13 @@ terraform {
       version = "2.19.0"
     }
   }
+  cloud {
+    organization = "NextOps"
+
+    workspaces {
+      name = "unifi-controller"
+    }
+  }
 }
 
 resource "digitalocean_app" "unifi-controller" {
