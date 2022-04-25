@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+variable "do_token" {}
+
 provider "digitalocean" {
   # Configuration options
+  token = var.do_token
+}
 }
