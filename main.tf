@@ -12,6 +12,7 @@ terraform {
       name = "unifi-controller"
     }
   }
+  required_version = ">= 1.1.9"
 }
 
 resource "digitalocean_app" "unifi-controller" {
