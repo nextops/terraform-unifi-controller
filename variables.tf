@@ -1,4 +1,4 @@
 variable "do_token" {
-  type = string
-  sensitive = true    
+  type      = string
+  sensitive = true
 }

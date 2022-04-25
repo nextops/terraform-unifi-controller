@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     digitalocean = {
-      source = "digitalocean/digitalocean"
+      source  = "digitalocean/digitalocean"
       version = "2.19.0"
     }
   }
@@ -16,7 +16,7 @@ terraform {
 }
 
 resource "digitalocean_app" "unifi-controller" {
-  
+
   spec {
     name   = "unifi-controller"
     region = "sfo"
@@ -27,10 +27,10 @@ resource "digitalocean_app" "unifi-controller" {
       instance_size_slug = "basic-xxs"
 
       image {
-          registry      = "linuxserver"
-          registry_type = "DOCKER_HUB"
-          repository    = "unifi-controller"
-          tag           = "7.0.25"
+        registry      = "linuxserver"
+        registry_type = "DOCKER_HUB"
+        repository    = "unifi-controller"
+        tag           = "7.0.25"
       }
     }
   }
