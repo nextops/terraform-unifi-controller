@@ -24,7 +24,7 @@ resource "digitalocean_app" "unifi-controller" {
     service {
       name               = "linuxserver-unifi-controller"
       instance_count     = 1
-      instance_size_slug = "basic-xxs"
+      instance_size_slug = "basic-m"
 
       image {
         registry      = "linuxserver"
