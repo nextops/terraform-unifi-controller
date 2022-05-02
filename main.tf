@@ -34,6 +34,10 @@ resource "digitalocean_app" "unifi-controller" {
         8880,
         10001
       ]
+      routes {
+        path                 = "/"
+        preserve_path_prefix = "true"
+      }
 
       image {
         registry      = "jacobalberty"
