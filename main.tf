@@ -22,7 +22,7 @@ resource "digitalocean_app" "unifi-controller" {
     region = "sfo"
 
     service {
-      name               = "linuxserver-unifi-controller"
+      name               = "unifi-controller-service"
       instance_count     = 1
       instance_size_slug = "basic-m"
       http_port          = 8080
@@ -33,10 +33,10 @@ resource "digitalocean_app" "unifi-controller" {
       ]
 
       image {
-        registry      = "linuxserver"
+        registry      = "jacobalberty"
         registry_type = "DOCKER_HUB"
-        repository    = "unifi-controller"
-        tag           = "7.0.25"
+        repository    = "unifi"
+        tag           = "v7.0.25"
       }
     }
   }
