@@ -27,9 +27,12 @@ resource "digitalocean_app" "unifi-controller" {
       instance_size_slug = "basic-m"
       http_port          = 8080
       internal_ports = [
+        3478,
+        6789,
         8443,
         8843,
-        8880
+        8880,
+        10001
       ]
 
       image {
