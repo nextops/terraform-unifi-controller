@@ -25,6 +25,12 @@ resource "digitalocean_app" "unifi-controller" {
       name               = "linuxserver-unifi-controller"
       instance_count     = 1
       instance_size_slug = "basic-m"
+      http_port          = 8080
+      internal_ports = [
+        8443,
+        8843,
+        8880
+      ]
 
       image {
         registry      = "linuxserver"
