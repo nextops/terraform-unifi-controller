@@ -30,7 +30,7 @@ resource "digitalocean_app" "unifi-controller" {
         registry      = "linuxserver"
         registry_type = "DOCKER_HUB"
         repository    = "unifi-controller"
-        tag           = "7.0.25"
+        tag           = "7.0.23"
       }
     }
   }
